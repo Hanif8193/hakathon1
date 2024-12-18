@@ -58,6 +58,7 @@ function Navbar() {
             </nav>
             
             <div className="hidden md:block ">
+              <div className="flex">
             <button
               className="inline-flex items-center bg-gray-100 border-0 py-1 px-4 focus:outline-none
      hover:bg-gray-200 text-base mt-4 md:mt-0 rounded-3xl"
@@ -69,7 +70,7 @@ function Navbar() {
             <Image src={IC2} alt="IC" width={30} height={30} className="ml-5" />
             <Image src={IC3} alt="IC" width={30} height={30} />
           </div>
-          
+          </div>
                   </header>
       </div>
     </div>
