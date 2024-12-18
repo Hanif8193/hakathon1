@@ -5,8 +5,7 @@ import IC1 from "../../../public/IC1.png";
 import IC2 from "../../../public/IC2.png";
 import IC3 from "../../../public/IC3.png";
 import Link from "next/link";
-
-
+import { MdOutlineMenu } from "react-icons/md";
 function Navbar() {
   return (
     <div >
@@ -35,10 +34,15 @@ function Navbar() {
       <div >
         <header className="text-gray-600 body-font">
           <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <div className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+              <div className="flex justify-start items-start">
+           < MdOutlineMenu/>
               <span className="ml-3 text-xl">SHOP. CO</span>
-            </a>
-            <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+              </div>
+              </div>
+            </div>
+            <div className="hidden md:block">
+            <nav className="  md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
               <Link href={"/"} className="mr-5 hover:text-gray-900"> Shop
                 
               </Link>
@@ -52,6 +56,8 @@ function Navbar() {
                 Brands
               </Link>
             </nav>
+            
+            <div className="hidden md:block ">
             <button
               className="inline-flex items-center bg-gray-100 border-0 py-1 px-4 focus:outline-none
      hover:bg-gray-200 text-base mt-4 md:mt-0 rounded-3xl"
@@ -59,10 +65,12 @@ function Navbar() {
               <Image src={IC1} alt="IC" width={30} height={30} />
               Search for products
             </button>
+            </div>
             <Image src={IC2} alt="IC" width={30} height={30} className="ml-5" />
             <Image src={IC3} alt="IC" width={30} height={30} />
           </div>
-        </header>
+          
+                  </header>
       </div>
     </div>
     
