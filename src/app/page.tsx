@@ -9,9 +9,9 @@ function Home() {
   return (
     <div>
       <Hero />
-      <Center />
-      <Center1 />
-      <Middle />
+      {/* <Center /> */}
+      {/* <Center1 /> */}
+      {/* <Middle /> */}
     </div>
   );
 }

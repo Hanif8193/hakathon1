@@ -1,80 +1,67 @@
-import React from "react";
-import MUT from "../../../public/Mut.png";
-import Image from "next/image";
-import IC1 from "../../../public/IC1.png";
-import IC2 from "../../../public/IC2.png";
-import IC3 from "../../../public/IC3.png";
 import Link from "next/link";
-import { MdOutlineMenu } from "react-icons/md";
+import { FaPlus } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+import { FaCartShopping } from "react-icons/fa6";
+import { SiAppium } from "react-icons/si";
+
+import { SheetSide } from "./Sheet";
+import { NavigationMenuDemo } from "./Nav";
 function Navbar() {
   return (
-    <div >
-      
-      
-      
-      <header className="text-gray-600 body-font  cover">
-        <div className="container mx-auto  flex-wrap p-5  md:flex-row items-center ">
-          <a className="flex title-font font-medium items-center bg-black text-gray-900 mb-4 md:mb-0">
-            <span className="ml-3 text-xl  text-white">
-              Sign up and get 20% off to you first order.
-            </span>
-            <div className="text-2xl font-bold underline underline-offset-2 text-white ml-5">
-              Sign Up Now
-            </div>
-            <Image
-              className="text-white ml-24 "
-              src= {MUT}
-              alt="MUT"
-              width={30}
-              height={30}
-            />
-          </a>
-        </div>
-      </header>
-      <div >
-        <header className="text-gray-600 body-font">
-          <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <div className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-              <div className="flex justify-start items-start">
-           < MdOutlineMenu/>
-              <span className="ml-3 text-xl">SHOP. CO</span>
-              </div>
-              </div>
-            </div>
-            <div className="hidden md:block">
-            <nav className="  md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-              <Link href={"/"} className="mr-5 hover:text-gray-900"> Shop
-                
-              </Link>
-              <Link href={"/on-sale"} className="mr-5 hover:text-gray-900">
-                On Sale
-              </Link>
-              <Link href={"/new-arrival"} className="mr-5 hover:text-gray-900">
-                New Arrival
-              </Link>
-              <Link href={"/brands"} className="mr-5 hover:text-gray-900">
-                Brands
-              </Link>
-            </nav>
+    <div>
+      {/* Top Header */}
+      <div className="bg-black w-full h-[38px] text-white flex  justify-center items-center relative">
+        <p className=" sm: text-sm mr-2 ">
+          Sign Up and get 20% off to your first order.
+        </p>
+        <button>Sign Up Now</button>
+        <FaPlus className="text-white absolute right-10 hidden sm:block" />
+      </div>
+
+      {/* Header */}
+
+      <div className="w-full h-[50px]  flex justify-between items-center px-5">
+        <SheetSide />
+        <div className=" text-xl sm:text-3xl font-bold ">SHOP.CO</div>
+        <div className="hidden md:block  ">
+          <ul className="text-sm flex gap-3 items-center">
+            <Link href={"/"}>
+              {" "}
+              
+            </Link>
             
-            <div className="hidden md:block ">
-              <div className="flex">
-            <button
-              className="inline-flex items-center bg-gray-100 border-0 py-1 px-4 focus:outline-none
-     hover:bg-gray-200 text-base mt-4 md:mt-0 rounded-3xl"
-            >
-              <Image src={IC1} alt="IC" width={30} height={30} />
-              Search for products
-            </button>
-            </div>
-            <Image src={IC2} alt="IC" width={30} height={30} className="ml-5" />
-            <Image src={IC3} alt="IC" width={30} height={30} />
+            <Link href={"/"}>
+            <NavigationMenuDemo/>
+            </Link>
+            <Link href={"/"}>
+              {" "}
+              <li>On Sale</li>
+            </Link>
+            <Link href={"/"}>
+              {" "}
+              <li>New Arrival</li>
+            </Link>
+            <Link href={"/"}>
+              {" "}
+              <li>Brands</li>
+            </Link>
+          </ul>
+        </div>
+        <div className="hidden md:block">
+          <div className="  flex justify-start items-center w-[300px] h-[40px] bg-[#f0f0f0] rounded-[62px]">
+            <FaSearch className="mr-3 text-xl" />
+            <input
+              placeholder="Search Item..."
+              className="w-full h-full bg-[#f0f0f0]  rounded-[62px] outline-none"
+            />
           </div>
-          </div>
-                  </header>
+        </div>
+        <div className="flex  ">
+          <FaCartShopping className="mr-5 text-2xl" />
+          <SiAppium className="text-2xl" />
+        </div>
       </div>
     </div>
-    
   );
 }
 
