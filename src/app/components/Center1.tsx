@@ -1,101 +1,104 @@
-import React from "react";
+
+import { Link } from "lucide-react";
 import Image from "next/image";
-import SH from "../../../public/SH1.png";
-import TS3 from "../../../public/TS3.png";
-import NI from "../../../public/NI.png";
-import P2 from "../../../public/P2.png";
-import S5 from "../../../public/S5.png";
-import S4 from "../../../public/S4.png";
-import S3 from "../../../public/S3.png";
-import S1 from "../../../public/S1.png";
 
-function Center1() {
-  return (
-    <div>
-      <section className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-wrap w-full mb-5">
-            <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-              <p className="sm:text-3xl text-2xl font-medium title-font mb-2 text-center text-gray-900">
-                TOP SELLING
-              </p>{" "}
-            </div>
-          </div>
-          <div className="flex flex-wrap -m-4">
-            <div className="xl:w-1/4 md:w-1/2 p-4">
-              <div className=" p-6 rounded-lg">
-                <Image src={SH} alt="SH" width={200} height={200} />
 
-                <p className="tracking-widest text-indigo-500 text-xs font-medium title-font"></p>
-                <p className="text-lg text-gray-900 font-medium title-font mb-4">
-                  Vertical Striped Shirt
-                </p>
-                <p className="leading-relaxed text-base">
-                  <Image src={S5} alt="S" width={150} height={150} />
-                </p>
-                <p className="text-lg text-gray-900 font-medium title-font mb-4">
-                  <div>
-                    $212 $232{" "}
-                    <button className="bg-pink-100 px-1 rounded-xl">
-                      -20%
-                    </button>
-                  </div>
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-1/4 md:w-1/2 p-4">
-              <div className=" p-6 rounded-lg">
-                <Image src={TS3} alt="TS" width={200} height={200} />
 
-                <p className="tracking-widest text-indigo-500 text-xs font-medium title-font">
-                  <p className="text-lg text-gray-900 font-medium title-font mb-4">
-                    Courage Graphic T-shirt
-                  </p>
-                </p>
-                <p className="leading-relaxed text-base">
-                  <Image src={S4} alt="S" width={150} height={150} />
-                </p>
-                <p className="text-lg text-gray-900 font-medium title-font mb-4">
-                  $145
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-1/4 md:w-1/2 p-4 cover">
-              <div className=" p-6 rounded-lg">
-                <Image src={NI} alt="SH" width={200} height={200} />
 
-                <p className="tracking-widest text-indigo-500 text-xs font-medium title-font"></p>
-                <p className="text-lg text-gray-900 font-medium title-font mb-4">
-                  Loose Fit Burmoda Shorts
-                </p>
-                <p className="leading-relaxed text-base">
-                  <Image src={S3} alt="S" width={150} height={150} />
-                </p>
-                <p className="text-lg text-gray-900 font-medium title-font mb-4">
-                  $80
-                </p>
-              </div>
-            </div>
-            <div className="xl:w-1/4 md:w-1/2 p-4">
-              <div className=" p-6 rounded-lg">
-                <Image src={P2} alt="SH" width={200} height={200} />
-                <p className="tracking-widest text-indigo-500 text-xs font-medium title-font"></p>
-                <p className="text-lg text-gray-900 font-medium title-font mb-4">
-                  Faded Skinny Jeans
-                </p>
-                <p className="leading-relaxed text-base">
-                  <Image src={S1} alt="S" width={150} height={150} />
-                </p>
-                <p className="text-lg text-gray-900 font-medium title-font mb-4">
-                  $210
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+
+import { IoIosStar } from "react-icons/io";
+
+interface Iproducts{
+   title:string,
+   price:string,
+   id:number,
+   reting?:string,
+   full_price?:string,
+   img_url:string
 }
 
-export default Center1;
+
+const product:Iproducts[]=[
+    {
+        title:"Vertical Stipped Shirt",
+        id:1,
+        price:"$212",
+        img_url:"/SH1.png",
+        full_price:"$232"
+    },
+
+    {
+        title:"Courage Graphic T-Shirt",
+        id:2,
+        price:"$145 ",
+        img_url:"/TS3.png",
+        
+    },
+    {
+        title:"Loose Fit Burmoda Shorts",
+        id:3,
+        price:"$80",
+        img_url:"/NI.png"
+    },
+    {
+        title:"Faded Skinny Jeens",
+        id:4,
+        price:"$210",
+        img_url:"/P2.png",
+        
+    },
+
+
+]
+
+
+
+
+const star = [
+    <IoIosStar key={1} />,
+    <IoIosStar key={2} />,
+    <IoIosStar key={3} />,
+    <IoIosStar key={4} />,
+    <IoIosStar key={5} />
+];
+
+
+
+export default function Items(){
+
+
+
+    return(
+    <div className="w-full h-[500px] px-10 py-10 mt-10 ">
+
+    <h2 className="text-3xl md:text-4xl text-center font-bold">TOP SALEING</h2>
+    {/* <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4  gap-5"> */}
+    <div className="flex flex-col md:flex-row justify-center md:justify-between px-10 mt-10">
+       {
+        product.map((data,index)=>{
+            return(
+                <div key={index}>
+                     
+                    <div className="w-[150px]h-[150px] bg-gray-300 rounded-lg">
+                    <Image src={data.img_url}alt={data.title}
+                    className=" w-full h-full rounded-lg"
+                    width={100}height={100}></Image>
+                     </div>
+                     
+                    <p className="font-bold">{data.title}</p>
+                    <p className="flex text-yellow-500">{star}</p>
+                    <p className="font-bold">{data.price} <span className="text-gray-300 font-bold line-through">{data.full_price}</span></p>
+                </div>
+                
+        
+
+                
+            )
+        })
+       }
+       
+    </div>
+    </div>
+
+    )
+}

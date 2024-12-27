@@ -6,7 +6,7 @@ import { PiStarFourFill } from "react-icons/pi";
 
 function Hero() {
   return (
-    <div className=" w-full h-full md:h-[500px] flex flex-col md:flex-row justify-between items-center">
+    <div className="  w-full h-full md:h-[500px] flex flex-col md:flex-row justify-between items-center px-10 mt-5">
       {/* Left Section  */}
       <div className="w-full md:w-[500px] mt-3 md:mt-10 ml-10 pl-3">
         <h3 className="text-2xl md:text-5xl font-bold">
@@ -25,19 +25,19 @@ function Hero() {
         <Image
           src={Pic}
           alt="Pic"
-          width={200}
-          height={200}
+          width={150}
+          height={150}
           className="w-[500px] mr-4"
         />
 
-        <p className="text-5xl absolute top-[135px] md: top-[300px] md: left-[-1px]">
+        <h2 className="text-5xl absolute top-[135px] md: top-[300px] md: left-[-1px]">
           {" "}
           <PiStarFourFill />{" "}
-        </p>
-        <p className="text-5xl absolute top-[20px] md: top-[100px] md: right-[-1px]">
+        </h2>
+        <h2 className="text-5xl absolute top-[20px] md: top-[100px] md: right-[-1px]">
           {" "}
           <PiStarFourFill />{" "}
-        </p>
+        </h2>
       </div>
     </div>
   );

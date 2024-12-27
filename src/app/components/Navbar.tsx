@@ -33,15 +33,15 @@ function Navbar() {
             <Link href={"/"}>
             <NavigationMenuDemo/>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/on-sale"}>
               {" "}
               <li>On Sale</li>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/new-arrival"}>
               {" "}
               <li>New Arrival</li>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/brands"}>
               {" "}
               <li>Brands</li>
             </Link>

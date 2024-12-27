@@ -148,3 +148,11 @@ function Footer() {
 }
 
 export default Footer
+export interface Iproducts {
+    title: string;
+    price: string;
+    id: number;
+    rating?: string;
+    full_price?: number;
+    img_url: string;
+}
