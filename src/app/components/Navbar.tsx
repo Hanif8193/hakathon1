@@ -3,7 +3,6 @@ import { FaPlus } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 import { FaCartShopping } from "react-icons/fa6";
 import { SiAppium } from "react-icons/si";
-
 import { SheetSide } from "./Sheet";
 import { NavigationMenuDemo } from "./Nav";
 function Navbar() {
@@ -25,13 +24,10 @@ function Navbar() {
         <div className=" text-xl sm:text-3xl font-bold ">SHOP.CO</div>
         <div className="hidden md:block  ">
           <ul className="text-sm flex gap-3 items-center">
+            <Link href={"/"}> </Link>
+
             <Link href={"/"}>
-              {" "}
-              
-            </Link>
-            
-            <Link href={"/"}>
-            <NavigationMenuDemo/>
+              <NavigationMenuDemo />
             </Link>
             <Link href={"/on-sale"}>
               {" "}

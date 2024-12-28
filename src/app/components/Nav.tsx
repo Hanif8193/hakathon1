@@ -1,10 +1,8 @@
+"use client";
 
-"use client"
+import * as React from "react";
 
-import * as React from "react"
-
-
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 import {
   NavigationMenu,
@@ -13,12 +11,9 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  
-} from "@/components/ui/navigation-menu"
+} from "@/components/ui/navigation-menu";
 
 const components: { title: string; href: string; description: string }[] = [
- 
-    
   {
     title: "Progress",
     href: "/docs/primitives/progress",
@@ -42,35 +37,27 @@ const components: { title: string; href: string; description: string }[] = [
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
-]
+];
 
 export function NavigationMenuDemo() {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        
-        
         <NavigationMenuItem>
           <NavigationMenuTrigger>Shop</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
               {components.map((Shop) => (
-                <ListItem
-                  key={Shop.title}
-                  title={Shop.title}
-                  href={Shop.href}
-                >
+                <ListItem key={Shop.title} title={Shop.title} href={Shop.href}>
                   {Shop.description}
                 </ListItem>
               ))}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-       
-       
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
 const ListItem = React.forwardRef<
@@ -95,6 +82,6 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+ListItem.displayName = "ListItem";

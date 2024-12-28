@@ -14,7 +14,7 @@ import G1 from "../../../public/Group 10.png";
 function NewArrival() {
   return (
     <div id="new-arrival">
-    <div className="  grid grid-cols-4 mt-5 px-5">
+    <div className="  grid grid-cols-4 mt-5 px-5 h-full sm:h-full">
       <div className=" row-span-4">
         <Image src={F} alt="F" width={210} height={210} />{" "}
       </div> 

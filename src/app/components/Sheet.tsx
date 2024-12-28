@@ -37,24 +37,41 @@ export function SheetSide() {
            
            
             
-            <Link href={"/"}>
+            {/* <Link href={"/"}>
             <p>
             <NavigationMenuDemo/>
           </p>
             </Link>
-            <Link href={"/"}>
+            <Link href={"#on-sale"}>
               {" "}
               <li>On Sale</li>
             </Link>
-            <Link href={"/"}>
+            <Link href={"#new-arrival"}>
               {" "}
               <li>New Arrival</li>
             </Link>
-            <Link href={"/"}>
+            <Link href={"#brands"}>
               {" "}
               <li>Brands</li>
             </Link>  
-              
+               */}
+                <Link href={"/"}> </Link>
+
+<Link href={"/"}>
+  <NavigationMenuDemo />
+</Link>
+<Link href={"/on-sale"}>
+  {" "}
+  <li>On Sale</li>
+</Link>
+<Link href={"/new-arrival"}>
+  {" "}
+  <li>New Arrival</li>
+</Link>
+<Link href={"/brands"}>
+  {" "}
+  <li>Brands</li>
+</Link>
             
             
             </ul>

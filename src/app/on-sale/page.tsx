@@ -11,61 +11,12 @@ const star = [
   <IoIosStar key={5} />,
 ];
 
-// interface Iproducts 
-//   title: string;
-//   price: string;
-//   id: number;
-//   reting?: string;
-//   full_price?: string;
-//   img_url: string;
-//   img1: string;
-//   img2: string;
-//   img3: string;
-// }
 
-// const product: Iproducts[] = [
-//   {
-//     title: "T-shirt with Tape Details",
-//     id: 1,
-//     price: "$120",
-//     img_url: "/TS.png",
-//     img1: "/image2.png",
-//     img2: "/image2.png",
-//     img3: "/image2.png",
-//   },
-//   {
-//     title: "Skinny Fit Jeans",
-//     id: 2,
-//     price: "$240 ",
-//     img_url: "/P1.png",
-//     full_price: "$260",
 
-//     img1: "/image2.png",
-//     img2: "/image2.png",
-//     img3: "/image2.png",
-//   },
-//   {
-//     title: "Checkered Shirt",
-//     id: 3,
-//     price: "$180",
-//     img_url: "/TS1.png",
-//     img1: "/image2.png",
-//     img2: "/image2.png",
-//     img3: "/image2.png",
-//   },
-//   {
-//     title: "Sleeve Strped T-Shirt",
-//     id: 4,
-//     price: "$130",
-//     img_url: "/TS2.png",
-//     full_price: "$160",
-//     img1: "/image2.png",
-//     img2: "/image2.png",
-//     img3: "/image2.png",
-//   },
-// ];
+
 export default function Onsale() {
   return (
+    <div id="on-sale">
     <div className="flex flex-col md:flex-row justify-between sm:mt-10 p-5 px-10 ">
       {/* Left Section */}
       <div className=" flex flex-col  justify-center items-center w-full  sm:w-[152px] order-2 sm:order-1 ">
@@ -77,7 +28,7 @@ export default function Onsale() {
           className=" w-[100px} sm:w-full h-[100px] sm:h-[150px] "
         ></Image>
         <Image
-          src={TS4}
+          src={"/PIC3.png"}
           alt="T"
           width={300}
           height={300}
@@ -164,6 +115,7 @@ export default function Onsale() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

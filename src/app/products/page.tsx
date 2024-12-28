@@ -51,12 +51,13 @@ const star = [
 
 export default function Items() {
   return (
-    <div className="w-full h-[500px] px-10 mt-10">
-      <h2 className="text-3xl md:text-4xl text-center font-bold">
-        NEW ARRIVAL
+    <div className="w-full  h-full sm:h-[500px] px-10 mt-10">
+      
+      <h2 className="text-2xl sm:text-3xl md:text-4xl text-center font-bold">
+       NEW ARRIVAL
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-5 mt-10">
-        {/* <div className="flex flex-col md:flex-row justify-center md:justify-between px-10 mt-10"> */}
+        
         {product.map((data) => {
           return (
             <div key={data.id}>
