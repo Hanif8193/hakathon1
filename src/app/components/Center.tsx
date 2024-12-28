@@ -3,14 +3,14 @@ import React from "react";
 import {
   Playfair_Display,
   Cinzel,
-  Bodoni_Moda,
+  Roboto,
   Prata,
   Montserrat,
 } from "next/font/google";
 const Playfair = Playfair_Display({ subsets: ["latin"] });
 const cinzel = Cinzel({ subsets: ["latin"] });
 const parata = Prata({ subsets: ["latin"], weight: "400" });
-const Bodoni = Bodoni_Moda({ subsets: ["latin"], weight:"600" });
+const roboto = Roboto({ subsets: ["latin"],weight:"400" });
 const montsserrat = Montserrat({ subsets: ["latin"] });
 
 function Center() {
@@ -22,9 +22,15 @@ function Center() {
             {" "}
             VERSAC
           </li>
-          <li className={`${cinzel.className}text-2xl md:text-4xl`}> ZARA</li>
+          <li className={`${cinzel.className}text-2xl md:text-4xl`}>
+            {" "}
+            ZARA
+          </li>
 
-          <li className={`${Bodoni.className}text-2xl md:text-4xl`}>GUCCI </li>
+          <li className={`${roboto.className}text-2xl md:text-4xl`}>
+            {" "}
+            GUCCI
+          </li>
 
           <li className={`${parata.className}text-2xl md:text-4xl`}>PARADA</li>
           <li className={`${montsserrat.className}text-2xl md:text-4xl`}>
